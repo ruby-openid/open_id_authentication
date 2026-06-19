@@ -18,5 +18,5 @@ Choose the option that best fits your use case:
 - Copyright (c) 2013 grosser
 - Copyright (c) 2016 Michael Grosser
 - Copyright (c) 2024-2025 Annibelle Boling
-- Copyright (c) 2024-2026 Peter Boling
+- Copyright (c) 2024-2026 Peter H. Boling
 - Copyright (c) 2025 Aboling0
