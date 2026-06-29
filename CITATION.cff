@@ -12,9 +12,9 @@ authors:
     orcid: 'https://orcid.org/0009-0008-8519-441X'
 identifiers:
   - type: url
-    value: 'https://github.com/pboling/open_id_authentication'
+    value: 'https://github.com/ruby-openid/open_id_authentication'
     description: "open_id_authentication"
-repository-code: 'https://github.com/pboling/open_id_authentication'
+repository-code: 'https://github.com/ruby-openid/open_id_authentication'
 abstract: >-
   open_id_authentication
 license: See license file

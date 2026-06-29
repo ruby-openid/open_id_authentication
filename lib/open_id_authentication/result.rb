@@ -5,7 +5,7 @@ module OpenIdAuthentication
       invalid: "Sorry, but this does not appear to be a valid OpenID",
       canceled: "OpenID verification was canceled",
       failed: "OpenID verification failed",
-      setup_needed: "OpenID verification needs setup",
+      setup_needed: "OpenID verification needs setup"
     }.freeze
 
     class << self
