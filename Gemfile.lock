@@ -1,5 +1,5 @@
 GIT
-  remote: https://github.com/kettle-dev/simplecov
+  remote: https://github.com/kettle-dev/simplecov.git
   revision: bc14cb6ef921e264332fd7b750bf6fb8916488c1
   branch: fix-final-parallel-worker-formatting
   specs:
@@ -10,6 +10,14 @@ PATH
   specs:
     open_id_authentication (2.0.2)
       rack-openid2 (~> 2.0, >= 2.0.2)
+      version_gem (~> 1.1, >= 1.1.13)
+
+PATH
+  remote: /var/home/pboling/src/my/ruby-openid/rack-openid2
+  specs:
+    rack-openid2 (2.0.3)
+      rack (>= 2.2)
+      ruby-openid2 (~> 3.1, >= 3.1.0)
       version_gem (~> 1.1, >= 1.1.13)
 
 GEM
@@ -33,8 +41,6 @@ GEM
     bundler-audit (0.9.3)
       bundler (>= 1.2.0)
       thor (~> 1.0)
-    byebug (13.0.0)
-      reline (>= 0.6.0)
     cgi (0.5.2)
     cmdparse (3.0.7)
     concurrent-ruby (1.3.7)
@@ -149,10 +155,6 @@ GEM
     public_suffix (7.0.5)
     racc (1.8.1)
     rack (3.2.6)
-    rack-openid2 (2.0.3)
-      rack (>= 2.2)
-      ruby-openid2 (~> 3.1, >= 3.1.0)
-      version_gem (~> 1.1, >= 1.1.4)
     rainbow (3.1.1)
     rake (13.4.2)
     rbs (4.0.3)
@@ -381,7 +383,6 @@ DEPENDENCIES
   appraisal2-rubocop (~> 0.2, >= 0.2.2)
   benchmark (~> 0.5, >= 0.5.0)
   bundler-audit (~> 0.9.3)
-  byebug (>= 11)
   cgi (~> 0.5)
   debug (>= 1.1)
   erb (~> 6.0, >= 6.0.4)
@@ -393,10 +394,10 @@ DEPENDENCIES
   kettle-test (~> 2.0, >= 2.0.8)
   kramdown (~> 2.5, >= 2.5.1)
   kramdown-parser-gfm (~> 1.1)
-  logger (~> 1.6, >= 1.6.5)
   mutex_m (~> 0.2)
   nomono (~> 1.0, >= 1.0.6)
   open_id_authentication!
+  rack-openid2!
   rake (~> 13.0)
   rbs (>= 3.0)
   rdoc (~> 6.11)
