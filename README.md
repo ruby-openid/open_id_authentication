@@ -21,6 +21,15 @@ I've summarized my thoughts in [this blog post](https://dev.to/galtzo/hostile-ta
 
 ## 🌻 Synopsis <a href="https://discord.gg/3qme4XHNKN"><img alt="Galtzo FLOSS Logo by Aboling0, CC BY-SA 4.0" src="https://logos.galtzo.com/assets/images/galtzo-floss/avatar-128px.svg" width="8%" align="right"/></a> <a href="https://ruby-toolbox.com"><img alt="ruby-lang Logo, Yukihiro Matsumoto, Ruby Visual Identity Team, CC BY-SA 2.5" src="https://logos.galtzo.com/assets/images/ruby-lang/avatar-128px.svg" width="8%" align="right"/></a>
 
+open_id_authentication is a Rails integration layer over `rack-openid2`. Its
+Railtie installs the Rack middleware and adds controller helpers for beginning
+and completing OpenID authentication. The completion callback yields a result
+object, the verified identifier, and any SReg or Attribute Exchange response.
+
+It supports the legacy OpenID protocol, not OpenID Connect (OIDC), and is most
+useful when maintaining a Rails application that already accepts OpenID
+identifiers.
+
 ## 💡 Info you can shake a stick at
 
 | Tokens to Remember | [![Gem name][⛳️name-img]][⛳️gem-name] [![Gem namespace][⛳️namespace-img]][⛳️gem-namespace] |
@@ -118,6 +127,24 @@ gem install open_id_authentication
 ```
 
 ## ⚙️ Configuration
+
+Load the gem after Rails so its Railtie can install
+`OpenIdAuthentication::Middleware` and include the controller helpers. Set the
+OpenID store during application initialization:
+
+```ruby
+# config/initializers/open_id_authentication.rb
+OpenIdAuthentication.store = :file
+```
+
+Supported store values are `:memory`, `:file`, `:memcache` (followed by Dalli
+server arguments), or an object implementing the `OpenID::Store` interface.
+Memory storage is process-local. File storage writes below `tmp/openids`, so it
+is suitable for one host but not a shared NFS deployment. Use Memcache or a
+custom durable store when requests can reach multiple application processes.
+
+The authentication action must accept both GET and POST callbacks, and the
+application must define `root_url` for the relying-party realm.
 
 ## 🔧 Basic Usage
 
