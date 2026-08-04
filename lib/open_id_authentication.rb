@@ -2,9 +2,9 @@
 require "version_gem"
 
 # This library
-require_relative "open_id_authentication/version"
 require_relative "open_id_authentication/middleware"
 require_relative "open_id_authentication/controller_methods"
+require_relative "open_id_authentication/version"
 
 require_relative "open_id_authentication/railtie" if defined?(Rails::Railtie)
 
