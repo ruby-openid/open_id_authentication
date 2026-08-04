@@ -1,3 +1,5 @@
+require "openid/store/memory"
+
 RSpec.describe OpenIdAuthentication do
   describe "::store" do
     subject(:store) { described_class.store = :memory }
