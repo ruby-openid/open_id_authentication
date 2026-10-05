@@ -123,8 +123,8 @@ dependency_conflicts:
     - gem: rubocop-packaging
       direct: open_id_authentication.gemspec
       modular: gemfiles/modular/style.gemfile
-      action: remove_modular_gem
-      reason: "The gemspec owns this development dependency; do not inject a second generic style declaration."
+      action: keep_both
+      reason: "The gemspec constrains the compatible version; the modular declaration selects the required fork source."
     - gem: standard
       direct: open_id_authentication.gemspec
       modular: gemfiles/modular/style.gemfile
