@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # RSpec Configs
 require "debug" if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("2.7") && ENV["CI"].nil? && ENV.fetch("DEBUG", "false").casecmp("true").zero?
 require "config/rspec/rspec_block_is_expected"
