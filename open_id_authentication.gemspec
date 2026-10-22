@@ -23,8 +23,8 @@ Gem::Specification.new do |spec|
   spec.authors = ["bitsweat", "david", "Geoffrey Grosenbach", "Phil R", "Peat Bakke", "Joshua Peek", "patricksrobertson", "Tom Hughes", "grosser", "Michael Grosser", "Annibelle Boling", "Peter H. Boling"]
   spec.email = ["floss@galtzo.com"]
 
-  spec.summary = "💎 Provides a thin wrapper around the excellent rack-openid2 gem."
-  spec.description = "💎 Provides a thin wrapper around the excellent rack-openid2 gem."
+  spec.summary = "🛂 Provides a thin wrapper around the excellent rack-openid2 gem."
+  spec.description = "🛂 Provides a thin wrapper around the excellent rack-openid2 gem."
   spec.homepage = "https://github.com/ruby-openid/open_id_authentication"
   spec.licenses = ["MIT"]
   spec.required_ruby_version = ">= 2.7.0"
